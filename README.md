@@ -1,89 +1,62 @@
-# camperbot ⛺️🔥🤖
+# case-watch-bot
 
-[![Build Status](https://travis-ci.org/sirMerr/camperbot.svg?branch=dev)](https://travis-ci.org/sirMerr/camperbot) [![codecov](https://codecov.io/gh/sirMerr/camperbot/branch/master/graph/badge.svg)](https://codecov.io/gh/sirMerr/camperbot) ![open source](https://img.shields.io/badge/❤-open--source-e64980.svg?longCache=true) <a href="https://discord.gg/WZB4AuS">![Discord](https://img.shields.io/discord/362050213403164673.svg?logo=discord&colorB=7289DA)</a>
+Get discord notifications when there are new cases of covid-19 discovered in your state
 
-freeCodeCamp Montreal discord bot, using [discord.js](https://github.com/discordjs/discord.js). Gives people marshmallows.
+![covid 19 bot](img/covid-19bot.png)
 
-## Installation
 
-### Prerequisites
+## About
 
-To run this you need to have
+This bot watches a few different department of health websites for changes. When it sees a change it pushes an update into all the channels it's configured to squak in. It also listens for user requests for data and responds to them. The bulk of the work in this bot is in scraping each website for data. As states update their code and formating, we have to update the code to scan them.
 
-* Node 8
-* yarn or npm
-* cloned this repo
-* ❤️
+## Add Bot to your server
 
-### Make a discord app
+To add the bot to your server navigate to this [link](https://discordapp.com/api/oauth2/authorize?client_id=686649091069050996&permissions=93184&scope=bot>) and follow the instructions.
 
-1.  Create a new [discord app](https://discordapp.com/developers/applications/me/) if you don't have one.
-2.  Make it a bot user.
-3.  Take note of the `Client ID`, `Client Secret` and `Token` (in the `Bot` section)
-    Create a `.env` file in your cloned repo. Put the contents of `.env.example` in it and replace with your saved tokens (first three)
+## Help wanted
 
-    ```env
-    CLIENT_ID=
-    CLIENT_SECRET=
-    BOT_TOKEN=
+We're looking for help getting more states parsed by the script! Pull requests welcome. Tweet [@nibalizer](https://twitter.com/nibalizer) if you have questions.
 
-    # Postgres DB
-    DB_HOST=
-    DB_NAME=
-    DB_USER=
-    DB_PORT=
-    DB_PASSWORD=
-    ```
-
-### Local DB
-
-Note: You don't need this if you are not working on commands that rely on a database. Additionally, we use PostgreSQL.
-
-Set up your local database and fill the rest of your `.env` with its credentials.
-
-Then run:
+## Bot Commands
 
 ```
-yarn migrate-up
+!or: Get stats from a specific state, by postal code
+!fed: Get Federal numbers from CDC
+!help: Get help on usage, adding bot to another server
+!source, !sources, !src: Get the links to the upstream data
 ```
 
-You should see something along the lines of this:
+## States supported
 
-```bash
-$ yarn build &&NODE_PATH=build node -r  libs/dotenv node_modules/.bin/db-migrate up
-$ babel src -d build
-src/app.js -> build/app.js
-...
-received data: CREATE SCHEMA IF NOT EXISTS public;
+* MN
+* TX
+* CA
+* NY
+* RI
+* Federal
 
-CREATE TABLE accounts(
-...
-```
-
-There should be no error message, and once you check your database you'll see it has tables in it now :tada:.
-
-## Usage
-
-Install dependencies
+## quickstart
 
 ```
-yarn
+git clone https://github.com/nibalizer/case-watch-bot
+cp .env.example .env
+cp example.state.json state.json
+vim .env
+# add your discord webhook to the config file
+npm install 
+npm start
 ```
 
-Run
+## Developement flow
+
+If you're just adding a state or fixing a state for a data change, try this:
+
 
 ```
-yarn start
+node main.js --test=CA
+# or replace CA with any other state code
 ```
 
-or, to reload of src file changes:
+This will test the code for that state only and stop executing. This speeds development and updates of state-specific code.
 
-```
-yarn start:watch
-```
 
-## Commands
-
-**At this time, a few commands are intended for development purposes**
-
-For a full, detailed list of commands, go here: https://sirmerr.github.io/camperbot/#/camperbot/commands

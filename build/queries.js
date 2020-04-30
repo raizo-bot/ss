@@ -1,7 +1,11 @@
-/**
- * Methods which manipulate the database or queries it
- */
-import { db, sql } from './libs/postgres';
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getMarshmallows = exports.incrementMarshmallow = exports.insertAccount = undefined;
+
+var _postgres = require('./libs/postgres');
 
 /**
  * Inserts new user into our accounts table. Note that you have
@@ -14,49 +18,43 @@ import { db, sql } from './libs/postgres';
  * @param {(error: any) => void}} errorHandler
  *    Function which will be called if an error occurs
  */
-export const insertAccount = ({
+const insertAccount = exports.insertAccount = ({
   discordId,
   createdAt,
   callback,
-  errorHandler,
+  errorHandler
 }) => {
-  const query = sql`
+  const query = _postgres.sql`
     INSERT INTO accounts(discord_id, created_at) VALUES(${discordId}, ${createdAt})
   `;
 
-  db
-    .none(query)
-    .then(callback)
-    .catch(errorHandler);
+  _postgres.db.none(query).then(callback).catch(errorHandler);
 };
 
 // Increment marshmallows for a given array of users
-export const incrementMarshmallow = ({
+/**
+ * Methods which manipulate the database or queries it
+ */
+const incrementMarshmallow = exports.incrementMarshmallow = ({
   discordId, // array of discord ids
   callback,
-  errorHandler,
+  errorHandler
 }) => {
-  const query = sql`
+  const query = _postgres.sql`
     UPDATE accounts SET marshmallows = marshmallows + 1
     WHERE discord_id = ${discordId}
     RETURNING accounts.marshmallows
   `;
 
-  db
-    .one(query)
-    .then(callback)
-    .catch(errorHandler);
+  _postgres.db.one(query).then(callback).catch(errorHandler);
 };
 
 // Get total marshmallows for a single user
-export const getMarshmallows = ({ discordId, callback, errorHandler }) => {
-  const query = sql`
+const getMarshmallows = exports.getMarshmallows = ({ discordId, callback, errorHandler }) => {
+  const query = _postgres.sql`
     SELECT marshmallows FROM accounts
     WHERE discord_id = ${discordId}
   `;
 
-  db
-    .one(query)
-    .then(callback)
-    .catch(errorHandler);
+  _postgres.db.one(query).then(callback).catch(errorHandler);
 };
