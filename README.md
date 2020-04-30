@@ -1,30 +1,37 @@
-# hello-express
+# Onyx Discord Bot Website
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) 
+![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg)
 
-A server that serves a webpage, its resources, and some data
+Onyx has her very own home on the Internet now, and all updates to commands tables, features, and more will be posted on this website,
+as well as on her GitHub README file.
 
+It includes some notable pages, which may be of important to those who wish to add Onyx to their Discord server.
 
-## Your Project
+## Visit It
+[Click here to visit Onyx's website.](https://silvia-odwyer.github.io/Onyx-Discord-Bot-Website/)
 
-On the front-end,
+## Screenshots
+![Onyx + Discord = Love](https://github.com/silvia-odwyer/Onyx-Discord-Bot-Website/blob/master/media/onyxdiscord2.png "Onyx + Discord = Love")
 
-- Edit `views/index.html` to change the content of the webpage
-- `public/client.js` is the javacript that runs when you load the webpage
-- `public/style.css` is the styles for `views/index.html`
-- Drag in `assets`, like images or music, to add them to your project
+![Onyx Labs: Experimental division](https://github.com/silvia-odwyer/Onyx-Discord-Bot-Website/blob/master/GIFs/onyx_labs.gif "Onyx Labs: Experimental division")
 
-On the back-end,
+![Onyx Labs: Experimental division](https://github.com/silvia-odwyer/Onyx-Discord-Bot-Website/blob/master/GIFs/onyx_labs_scrolldown.gif "Onyx Labs: Experimental division")
 
-- your app starts at `server.js`
-- add frameworks and packages in `package.json`
-- safely store app secrets in `.env` (nobody can see this but you and people you invite)
+## Scrolling Animations
+Scrolling animations are using the amazing ScrollMagic.js library, in case you're wondering! Creating scroll animations
+with this library was such a great experience, and I'd recommend it for anyone who wants to add some dynamic animation to their website.
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy.
+## Onyx LABS
+This is the experimental division, containing some new features that Onyx may have in the future. It has a slightly different 
+UI to the rest of the website, in order to enhance its experimental feel.
 
+## Contributors
+Pull requests are always welcome! If you want to add more content to the website, have artwork you'd like to submit, or just 
+want to fix something up, submit away! ^^
 
-## Made by [Glitch](https://glitch.com/)
+## Invite To Your Server
+[Just click here to invite Onyx to your server!](https://discordapp.com/oauth2/authorize?&client_id=444948120573313024&scope=bot&permissions=0)
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
-
-Find out more [about Glitch](https://glitch.com/about).
-
-( ᵔ ᴥ ᵔ )
+## Test Onyx Out In This Support Server
+If you want to test Onyx out before adding her to your server, [just join this server](https://discord.gg/cSWHaEK), and leave when you want.
+Onyx runs 24/7, so she'll always be online. :D
