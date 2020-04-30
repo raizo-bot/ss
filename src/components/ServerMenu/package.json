@@ -1,6 +1,0 @@
-{
-  "name": "ServerMenu",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./ServerMenu.js"
-}

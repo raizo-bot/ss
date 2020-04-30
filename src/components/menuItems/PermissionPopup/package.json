@@ -1,6 +1,0 @@
-{
-  "name": "PermissionPopup",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./PermissionPopup.js"
-}
