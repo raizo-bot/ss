@@ -1,0 +1,104 @@
+@import '../../components/variables.css';
+
+.grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.root {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 0 40px;
+  max-width: var(--max-content-width);
+}
+
+.userContainer {
+  display: flex;
+}
+
+.icon {
+  border: 32px;
+}
+
+/* .name {
+
+} */
+
+.userAvatar {
+  padding: 10px;
+}
+
+.userInfo {
+  padding: 10px;
+}
+
+.server {
+  padding: 0;
+}
+
+.serverItem {
+  border: 3px solid;
+  width: 196px;
+  margin: 5px;
+  text-align: center;
+  align-content: center;
+  padding: 5px;
+  height: auto;
+}
+
+.botOnServer {
+  border-color: #b5b2af;
+  background-color: rgb(219, 219, 219);
+}
+
+.botNotOnServer {
+  border-color: #8c8c8c;
+  filter: grayscale(0.25);
+  background-color: rgb(160, 160, 160);
+}
+
+.botNotOnServer:hover {
+  border-color: #8c8c8c;
+  filter: none;
+  background-color: rgb(219, 219, 219);
+}
+
+.noAddPerms {
+  border-color: #464646;
+  filter: grayscale(1);
+  background-color: rgb(100, 100, 100);
+}
+
+.serverGuildIconBox {
+  width: 128px;
+  height: 128px;
+  margin: 32px;
+  border-radius: 64px;
+}
+
+.serverGuildIcon {
+  border: 0;
+  width: 128px;
+  height: 128px;
+  border-radius: 64px;
+}
+
+.serverLabel {
+  width: 100%;
+  font-family: sans-serif;
+}
+
+.serverTitle {
+  font-size: 1.125em;
+}
+
+.serverTitle,
+.serverDesc {
+  display: block;
+}

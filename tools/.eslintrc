@@ -1,0 +1,11 @@
+{
+  "rules": {
+    "no-console": 0,
+    "global-require": 0,
+    "max-len": [
+      "error",
+      120
+    ],
+    "no-prototype-builtins": 0
+  }
+}
