@@ -1,3 +1,2 @@
-# Luckybot Website
-
-Website for [Luckybot](https://luckybot.io) made with [Bulma](http://bulma.io).
+# baronbot.github.io
+Website for Baron, a League of Legends Discord bot.
