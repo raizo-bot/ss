@@ -1,39 +1,16 @@
-# Chipsbot
+# txt-bot-and-server
+Combination of all Software related to txt's discord and servers
 
-This is a dated repository for the source code for the core of Chipsbot, a discord bot by William Zhou.
-A public version of this bot can be added with https://invite.chipsbot.me/, running it by yourself is not supported.
+# Contents
 
-## Useful Links
- • [Homepage](https://chipsbot.me)
+There will be different parts to this repo:
+- A Discord bot
+- A Webserver for serving a (fairly) static landing page
+- The same webserver will also serve another bigger Minecraft-Server specific Website, with dynamic contents
 
- • [Invite](https://invite.chipsbot.me)
+The Data of everything will get saved in a MongoDB Datastore.
 
- • [Support Server](https://support.chipsbot.me)
+# Scope
 
- • [Donate](https://paypal.me/wzhouwzhou)
- 
- • [Uptime](https://uptime.chipsbot.me)
-
-## Innovative yet easy-to-use features with hundreds of commands.
-
-  • Board games like Chess and Connect Four with AI and customisable board size
-
-  • Image and meme generation fun commands
-
-  • Easy user, channel and server information and management commands, mobile friendly
-
-  • Utilities such as a calculator and equation solver and text translation for hundreds of languages
-
-  • Easy to use moderation commands
-
-### Issues
-Having issues? Want to contact us? Feel free to join our support server at https://support.chipsbot.me/
-
-## Invite Chips today and do -help to see all the bot has to offer!
-
-### License - Currently Private, all rights reserved ©Chipsbot/William Zhou.
-
-### Contributing
-We are not hiring developers at this point.
-
-![](https://cdn.discordapp.com/attachments/307625071420375040/486915259743862804/Chips_Banner.png)
+The scope of this project is fairly small. Everything will be designed to work only for our server-setup. 
+Feel free to use any code for your own projects!
